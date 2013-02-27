@@ -1,5 +1,5 @@
 === Genericon'd ===
-Contributors: ipstenu
+Contributors: Ipstenu
 Tags: icons, genericons, font icon, UI
 Requires at least: 3.5
 Tested up to: 3.6
