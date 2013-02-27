@@ -35,8 +35,17 @@ Add shortcode or HTML to your posts, pages and even widgets to display a Generic
 
 Yes, but Genericon'd is a Zaboo-esque sort of way of saying 'These icons have been genericonified!' I was in a The Guild frame of mind. Also since this is not the official plugin, I didn't want to use that slug.
 
+= What are all the codes to use? =
+
+If you're like me, you forget this alllll the time. On your WP dashboard, go to Apperance -> Genericon'd. The page there will show you everything you need to know about using Genericons.
+
+= Can I add it to menus? =
+
+Yes! If you use CSS classes, you can apply a class like this:  `genericon genericon-facebook` You may need to jigger about with css to make the layout perfect.
+
 == Screenshots ==
 
+1. Genericon'd help page
 
 == Changelog ==
 
