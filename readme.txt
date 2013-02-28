@@ -19,7 +19,7 @@ To use any of the Genericons icons on your WordPress site you can use basic HTML
 
 To display the Twitter icon
 
-HTML: `<div class="genericon genericon-twitter"></div>`
+HTML: `<i class="genericon genericon-twitter"></i>`
 
 Shortcode: `[genericon icon=twitter]`
 
@@ -48,6 +48,10 @@ Yes! If you use CSS classes, you can apply a class like this:  `genericon generi
 1. Genericon'd help page
 
 == Changelog ==
+
+= 1.1 =
+* 
+* Tweaks and adjustments. Documentation.
 
 = 1.0 =
 * 2013-02-27

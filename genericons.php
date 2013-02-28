@@ -3,7 +3,7 @@
 Plugin Name: Genericon'd
 Plugin URI: http://halfelf.org/
 Description: Use the Genericon icon set within WordPress. Icons can be inserted using either HTML or a shortcode.
-Version: 1.0
+Version: 1.1
 Author: Mika Epstein
 Author URI: http://ipstenu.org/
 Author Email: ipstenu@ipstenu.org
@@ -60,7 +60,7 @@ class GenericonsHELF {
         extract( shortcode_atts( array(
                     'icon'  => 'share'
                 ), $params ) );
-        $genericon = '<div class="genericon genericon-'.$params['icon'].'">&nbsp;</div>';
+        $genericon = '<i class="genericon genericon-'.$params['icon'].'"></i>';
 
         return $genericon;
     }
@@ -105,7 +105,7 @@ class GenericonsHELF {
 
         	<div class="icons">
 
-            <h3>Post Formats</h2>
+            <h3>Post Formats</h3>
 
 <table class="form-table">
 <tbody><tr valign="top">
@@ -221,7 +221,9 @@ class GenericonsHELF {
 </tr>
 </tbody></table>        
 
-	<p>If you wan to insert an icon manually using the <code>:before</code> selector, you can setup CSS rules like the following example. <strong>Make sure to set the size to a multiple of 16px</strong> or the icons could end up looking fuzzy:</p>
+    <p><em>The following documentation is from the default example.html included in the Genericons download package.</em></p>
+
+	<p>If you want to insert an icon manually using the <code>:before</code> selector, you can setup CSS rules like the following example. <strong>Make sure to set the size to a multiple of 16px</strong> or the icons could end up looking fuzzy:</p>
 
 <p><textarea class="code" style="min-height: 150px;" onclick="select();">.my-icon:before {
         content: '\2605';
