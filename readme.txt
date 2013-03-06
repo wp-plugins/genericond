@@ -64,7 +64,6 @@ You can use the asterisk hack to serve a different icon to IE7 once you have sav
 = 1.1 =
 * 2013-03-06
 * Tweaks and adjustments. 
-* Moving documentation to it's own page for easier updating.
 * New banner (thanks to Joen)
 
 = 1.0 =
