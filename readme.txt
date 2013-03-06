@@ -3,7 +3,7 @@ Contributors: ipstenu
 Tags: icons, genericons, font icon, UI
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,10 +62,10 @@ You can use the asterisk hack to serve a different icon to IE7 once you have sav
 == Changelog ==
 
 = 1.1 =
-* 
+* 2013-03-06
 * Tweaks and adjustments. 
 * Moving documentation to it's own page for easier updating.
-
+* New banner (thanks to Joen)
 
 = 1.0 =
 * 2013-02-27
