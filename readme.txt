@@ -1,9 +1,9 @@
 === Genericon'd ===
-Contributors: Ipstenu
+Contributors: ipstenu
 Tags: icons, genericons, font icon, UI
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,7 @@ To use any of the Genericons icons on your WordPress site you can use basic HTML
 
 To display the Twitter icon
 
-HTML: `<i class="genericon genericon-twitter"></i>`
+HTML: `<div class="genericon genericon-twitter"></div>`
 
 Shortcode: `[genericon icon=twitter]`
 
@@ -43,6 +43,18 @@ If you're like me, you forget this alllll the time. On your WP dashboard, go to 
 
 Yes! If you use CSS classes, you can apply a class like this:  `genericon genericon-facebook` You may need to jigger about with css to make the layout perfect.
 
+= Why don't these work on IE 7? =
+
+Genericons itself <strong>does not come with fallback icons by default</strong> -- therefore you have to create them yourself. If you are using HTML similar to this example: <code>&lt;span class="genericon genericon-warning"&gt;&lt;/span&gt;</code>
+
+You can use the asterisk hack to serve a different icon to IE7 once you have saved the fallback icons to your project:
+
+<pre>.genericon-warning {
+    *background: url(fallback-icon.png) no-repeat center center;
+    *text-indent: 100%;
+}
+</pre>
+
 == Screenshots ==
 
 1. Genericon'd help page
@@ -50,8 +62,10 @@ Yes! If you use CSS classes, you can apply a class like this:  `genericon generi
 == Changelog ==
 
 = 1.1 =
-* 
-* Tweaks and adjustments. Documentation.
+* 2013-03-06
+* Tweaks and adjustments. 
+* Moving documentation to it's own page for easier updating.
+* New banner (thanks to Joen)
 
 = 1.0 =
 * 2013-02-27
