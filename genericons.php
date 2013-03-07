@@ -8,19 +8,24 @@ Author: Mika Epstein
 Author URI: http://ipstenu.org/
 Author Email: ipstenu@ipstenu.org
 Credits:
-     Forked from Rachel Baker's Font Awesome for WordPress plugin
+     Forked plugin code from Rachel Baker's Font Awesome for WordPress plugin
      https://github.com/rachelbaker/Font-Awesome-WordPress-Plugin
 
 License:
 
   Copyright (C) 2013  Mika Epstein.
 
-    This file is part of Genericons, a plugin for WordPress.
+    This file is part of Genericon'd, a plugin for WordPress.
 
-    The Genericons Plugin is free software: you can redistribute it and/or
+    The Genericon'd Plugin is free software: you can redistribute it and/or
     modify it under the terms of the GNU General Public License as published
     by the Free Software Foundation, either version 2 of the License, or
     (at your option) any later version.
+    
+    Genericons itself is free software; you can redistribute it and/or modify 
+    it under the terms of the GNU General Public License as published by the 
+    Free Software Foundation; either version 2 of the License, or (at your option) 
+    any later version.
 
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -29,11 +34,7 @@ License:
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-    
-    Genericons itself is free software; you can redistribute it and/or modify 
-    it under the terms of the GNU General Public License as published by the 
-    Free Software Foundation; either version 2 of the License, or (at your option) 
-    any later version.
+
 
 */
 
@@ -53,14 +54,25 @@ class GenericonsHELF {
 
     public function register_plugin_styles() {
         global $wp_styles;
-        wp_enqueue_style( 'genericons-styles', plugins_url( 'lib/genericons.min.css', __FILE__  ) );
+        wp_enqueue_style( 'genericons-styles', plugins_url( 'lib/genericons.min.css?ver1.2', __FILE__  ) );
     }
 
     public function setup_shortcode( $params ) {
-        extract( shortcode_atts( array(
-                    'icon'  => 'share'
-                ), $params ) );
-        $genericon = '<i class="genericon genericon-'.$params['icon'].'"></i>';
+        $genericonatts = shortcode_atts( array(
+                    'icon'  => '',
+                    'size'  => '',
+                    'color' => ''
+                ), $params );
+        
+        $genericon_size = "genericon-";
+        
+        if ( !is_null($genericonatts['size'] && ( $genericonatts['size'] == '2x' || $genericonatts['size'] == '3x' || $genericonatts['size'] == '4x' || $genericonatts['size'] == '5x' || $genericonatts['size'] == '6x' )) ) {  $genericon_size .= $genericonatts['size']; }
+        else { $genericon_size .= "1x"; }
+        
+        if ( !is_null($genericonatts['color']) ) $genericon_color = $genericonatts['color'];
+        else $genericon_color = 'inherit';
+                
+        $genericon = '<i style="color:'.$genericon_color.';" class="genericon genericon-'.$genericonatts['icon'].' '.$genericon_size.'"></i>';
 
         return $genericon;
     }
