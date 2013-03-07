@@ -58,6 +58,7 @@ You can use the asterisk hack to serve a different icon to IE7 once you have sav
 == Screenshots ==
 
 1. Genericon'd help page
+2. Zaboo, patron avatar of Genericon'd
 
 == Changelog ==
 
