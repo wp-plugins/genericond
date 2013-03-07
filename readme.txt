@@ -21,7 +21,7 @@ To display the Twitter icon:
 
 HTML: `<div class="genericon genericon-twitter"></div>` or `<i class="genericon genericon-twitter"></i>`
 
-Shortcode: `[genericon icon=twitter]` or `[genericon icon=twitter size=32]`
+Shortcode: `[genericon icon=twitter]`
 
 == Installation ==
 
