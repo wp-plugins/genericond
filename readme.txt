@@ -82,6 +82,11 @@ You can use the asterisk hack to serve a different icon to IE7 once you have sav
 
 == Changelog ==
 
+= 1.3 =
+*
+* Tumblr?
+* Changed resize to use multiples of 16px, after talking to Joen.
+
 = 1.2 =
 * 2013-03-07
 * Added in variable for size to allow for on-the-fly adjustments to color and size.
