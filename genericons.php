@@ -3,7 +3,7 @@
 Plugin Name: Genericon'd
 Plugin URI: http://halfelf.org/
 Description: Use the Genericon icon set within WordPress. Icons can be inserted using either HTML or a shortcode.
-Version: 1.3b
+Version: 1.3
 Author: Mika Epstein
 Author URI: http://ipstenu.org/
 Author Email: ipstenu@ipstenu.org
@@ -54,7 +54,7 @@ class GenericonsHELF {
 
     public function register_plugin_styles() {
         global $wp_styles;
-        wp_enqueue_style( 'genericons-styles', plugins_url( 'lib/genericons.min.css?ver1.2', __FILE__  ) );
+        wp_enqueue_style( 'genericons-styles', plugins_url( 'lib/genericons.min.css?ver1.3', __FILE__  ) );
     }
 
     public function setup_shortcode( $params ) {
@@ -106,11 +106,11 @@ class GenericonsHELF {
 
         <h3>Usage Example</h3>
 
-        <p><div alt="f202" class="genericon genericon-twitter"></div> is made by either <code>[genericon icon=twitter]</code> or <code>&lt;div alt="f202" class="genericon genericon-twitter"&gt;&lt;/div&gt;</code> - You can also use <code>&lt;i&gt;</code> and <code>&lt;span&gt;</code> tags.</p>
+        <p><div alt="f202" class="genericon genericon-tumblr"></div> Using a normal genericon can be done by a shortcode like <code>[genericon icon=tumblr]</code> or regular HTML like <code>&lt;div alt="f202" class="genericon genericon-tumblr"&gt;&lt;/div&gt;</code> - You can also use <code>&lt;i&gt;</code> and <code>&lt;span&gt;</code> tags.</p>
         
-        <p>On the fly color changing means you can make a Twitter Blue icon: <code>&#091;genericon icon=twitter color=#4099FF&#093;</code></p>
+        <p><div alt="f202" class="genericon genericon-twitter" style="color:#4099FF;"></div> On the fly color changing means you can make a Twitter Blue icon: <code>&#091;genericon icon=twitter color=#4099FF&#093;</code></p> (Yes, that is the right color for Twitter Blue)
         
-        <p>On the fly resize lets you make a Facebook icon bigger: <code>&#091;genericon icon=facebook size=4x&#093;</code></p>
+        <p><div alt="f202" class="genericon genericon-facebook genericon-4x"></div> On the fly resize lets you make a Facebook icon bigger: <code>&#091;genericon icon=facebook size=4x&#093;</code></p>
         
         <h3>Available Genericons</h3>
 
