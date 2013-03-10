@@ -3,7 +3,7 @@ Contributors: Ipstenu
 Tags: icons, genericons, font icon, UI
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,9 +83,9 @@ You can use the asterisk hack to serve a different icon to IE7 once you have sav
 == Changelog ==
 
 = 1.3 =
-*
-* Tumblr?
+* 2013-03-09
 * Changed resize to use multiples of 16px, after talking to Joen.
+* Tumblr added by Joen, in response to bribery of version 1.3
 
 = 1.2 =
 * 2013-03-07
