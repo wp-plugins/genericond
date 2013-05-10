@@ -61,7 +61,7 @@ You can use 2x through 6x. Anything else punts it to 1x.
 
 = I want to repeat an icon =
 
-You mean like this: `[genericon icon=star repeat=4]`
+You mean like this `[genericon icon=star repeat=4]` ? Oh yeah.
 
 = How about changing the hover-color? =
 
