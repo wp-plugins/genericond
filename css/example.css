@@ -17,5 +17,5 @@ h2 div.genericon {font-size:48px;padding-right:20px;}
 .my-button:active {background: #d94412;background: -webkit-linear-gradient(top, #d94412 0%, #e05d22 100%); background: -moz-linear-gradient(top, #d94412 0%, #e05d22 100%); background: -ms-linear-gradient(top, #d94412 0%, #e05d22 100%); background: -o-linear-gradient(top, #d94412 0%, #e05d22 100%);background: linear-gradient(to bottom, #d94412 0%, #e05d22 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d94412', endColorstr='#e05d22', GradientType=0); border: none;border-top: 3px solid #b93207;padding: 6px 16px 7px 16px}
 #iconlist .new, #iconlist .update {position: relative;}
 #iconlist .new:after, #iconlist .update:after {color: #EA834D;display: block;content: "NEW";font: bold 8px/1 sans-serif;position: absolute;top: -8px;left: 6px;z-index: 10;}
-#iconlist .update:after {content: "UPDATED";left: -1px;}
+#iconlist .update:after {content: "UPDATED";left: -1px;top: -15px;}
 .code {display: block;font: 14px/1.5 monospace;width: 740px;white-space: pre;border: 1px solid #CCC;padding: 10px;color: #777;overflow: auto;}
