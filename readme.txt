@@ -3,7 +3,7 @@ Contributors: Ipstenu
 Tags: icons, genericons, font icon, UI
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 2.0.9
+Stable tag: 2.0.9.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,13 +13,13 @@ Enables easy use of the Genericons icon font set from within WordPress.  Icons c
 
 Genericons are vector icons embedded in a webfont designed to be clean and simple keeping with a generic aesthetic.
 
-A full list of the Genericons icons is available: [http://genericons.com/](http://genericons.com/)
+A full list of the Genericons icons is available at [http://genericons.com/](http://genericons.com/) but also on the WP Admin -> Apperance -> Genericon'd page.
 
 To use any of the Genericons icons on your WordPress site you can use basic HTML (for inserting in themes and functions) or shortcodes (for use in posts or widgets). You can adjust the size of the icons via css or, when using the shortcode, the size attribute. Default size is 16px.
 
 To display the Twitter icon:
 
-HTML: `<div class="genericon genericon-twitter"></div>` or `<i class="genericon genericon-twitter"></i>`
+HTML: `<div class="genericond genericon genericon-twitter"></div>` or `<i class="genericond genericon genericon-twitter"></i>`
 
 Shortcode: `[genericon icon=twitter]`
 
@@ -43,6 +43,14 @@ If you're like me, you forget this alllll the time. On your WP dashboard, go to 
 
 Yes! If you use CSS classes, you can apply a class like this:  `genericon genericon-facebook` You may need to jigger about with css to make the layout perfect.
 
+If you want to put an icon AND text, you 
+
+= When I exported and imported my content, the menu code didn't come with. What up? =
+
+There's an alternate way to add in menu code: `<i class="genericond genericon genericon-facebook"></i>`
+
+And apparently it doesn't export/import right. I don't know why. I'm working on it, and a way to put shortcodes in menus, but patches are welcome.
+
 = How do I change colors? =
 
 The power of CSS! If you want to change the color to red for all genericons, add `.genericon {color:red;}` to your theme's CSS. If you just want Twitter to be blue, add `.genericon-twitter {color:blue;}` and so on and so forth. Colors are based on font, you see.
@@ -62,6 +70,10 @@ You can use 2x through 6x. Anything else punts it to 1x.
 = I want to repeat an icon =
 
 You mean like this: `[genericon icon=star repeat=4]`
+
+= Can I flip an icon? =
+
+Sure! `[genericon icon=twitter rotate={90|180|270|flip-horizontal|flip-vertical} ]`
 
 = How about changing the hover-color? =
 
@@ -85,6 +97,19 @@ You can use the asterisk hack to serve a different icon to IE7 once you have sav
 2. Zaboo, patron avatar of Genericon'd
 
 == Changelog ==
+
+= 2.0.9.2 =
+* 2013-07-19
+* Corrected conflict with Jetpack
+
+= 2.0.9.1 =
+* 2013-07-18
+* Fixed bug with resizing when other themes call in Genericons
+* Change manual nested if into an `in_array()` instead (smarter!)
+* Corrected CSS to match official files 100%
+* Renamed `/lib/` to `/genericons/` (for easier updates)
+* Moved Genericon'd CSS to it's own file and folder (for easier updates)
+* Added in rotate (Credit: <a href="http://fortawesome.github.io/Font-Awesome/examples/#rotated-flipped">Font-Awesome</a>)
 
 = 2.0.9 =
 * 2013-06-26
@@ -118,3 +143,7 @@ You can use the asterisk hack to serve a different icon to IE7 once you have sav
 = 1.0 =
 * 2013-02-27
 * Initial release
+
+== Upgrade Notice ==
+
+New class of "genericond" added to allow for more precise styling in a way that doesn't blow up themes.
