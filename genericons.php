@@ -3,7 +3,7 @@
 Plugin Name: Genericon'd
 Plugin URI: http://halfelf.org/
 Description: Use the Genericon icon set within WordPress. Icons can be inserted using either HTML or a shortcode.
-Version: 3.0.1
+Version: 3.0.3
 Author: Mika Epstein
 Author URI: http://ipstenu.org/
 Author Email: ipstenu@ipstenu.org
@@ -59,13 +59,13 @@ class GenericonsHELF {
             wp_dequeue_style( 'genericons' );
             wp_deregister_style('genericons');
         }
-        wp_enqueue_style( 'genericons', plugins_url( 'genericons/genericons.css', __FILE__ , '', '3.0.1'  ) );
-        wp_enqueue_style( 'genericond', plugins_url( 'css/genericond.css', __FILE__ , '', '3.0.1' ) );
+        wp_enqueue_style( 'genericons', plugins_url( 'genericons/genericons.css', __FILE__ , '', '3.0.3'  ) );
+        wp_enqueue_style( 'genericond', plugins_url( 'css/genericond.css', __FILE__ , '', '3.0.3' ) );
     }
 
     function register_admin_styles() {
-    	wp_register_style( 'genericondExampleStyles', plugins_url( 'css/example.css', __FILE__ , '', '3.0.1' ) );
-    	wp_register_script( 'genericondExampleJS', plugins_url( 'js/example.js', __FILE__ , array( 'jquery' ), '3.0.1' ) );
+    	wp_register_style( 'genericondExampleStyles', plugins_url( 'css/example.css', __FILE__ , '', '3.0.3' ) );
+    	wp_register_script( 'genericondExampleJS', plugins_url( 'js/example.js', __FILE__ , array( 'jquery' ), '3.0.3' ) );
     }
 
     function add_admin_styles() {
@@ -132,7 +132,7 @@ class GenericonsHELF {
 		?>
 		<div class="wrap">
 
-        <h2>Genericon'd 3.0.1 Settings</h2>
+        <h2>Genericon'd 3.0.3 Settings</h2>
         
         <p>There are no settings for Genericon'd. This page is for documentation only. <a href="http://genericons.com">Genericons</a> are vector icons embedded in a webfont designed to be clean and simple keeping with a generic aesthetic. You can use genericons for instant HiDPI, to change icon colors on the fly, or even with CSS effects such as drop-shadows or gradients. They are provided here as a quick way to include them on your site, regardless of theme.</p>
     	<div id="primary">
@@ -293,6 +293,14 @@ class GenericonsHELF {
         }
         return $links;
     }
+		// add settings to manage plugin page
+		function add_settings_link( $links, $file ) {
+			if ( plugin_basename( __FILE__ ) == $file ) {
+				$settings_link = '<a href="' . admin_url( 'themes.php?page=genericons' ) . '">' . __( 'Settings' ) . '</a>';
+				array_unshift( $links, $settings_link );
+			}
+			return $links;
+		}
 
 }
 
