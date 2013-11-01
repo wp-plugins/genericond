@@ -3,7 +3,7 @@
 Plugin Name: Genericon'd
 Plugin URI: http://halfelf.org/
 Description: Use the Genericon icon set within WordPress. Icons can be inserted using either HTML or a shortcode.
-Version: 3.0.3
+Version: 3.0.3.1
 Author: Mika Epstein
 Author URI: http://ipstenu.org/
 Author Email: ipstenu@ipstenu.org
@@ -21,10 +21,10 @@ License:
     modify it under the terms of the GNU General Public License as published
     by the Free Software Foundation, either version 2 of the License, or
     (at your option) any later version.
-    
-    Genericons itself is free software; you can redistribute it and/or modify 
-    it under the terms of the GNU General Public License as published by the 
-    Free Software Foundation; either version 2 of the License, or (at your option) 
+
+    Genericons itself is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by the
+    Free Software Foundation; either version 2 of the License, or (at your option)
     any later version.
 
     This program is distributed in the hope that it will be useful,
@@ -59,13 +59,13 @@ class GenericonsHELF {
             wp_dequeue_style( 'genericons' );
             wp_deregister_style('genericons');
         }
-        wp_enqueue_style( 'genericons', plugins_url( 'genericons/genericons.css', __FILE__ , '', '3.0.3'  ) );
-        wp_enqueue_style( 'genericond', plugins_url( 'css/genericond.css', __FILE__ , '', '3.0.3' ) );
+        wp_enqueue_style( 'genericons', plugins_url( 'genericons/genericons.css', __FILE__ , '', '3.0.3.1'  ) );
+        wp_enqueue_style( 'genericond', plugins_url( 'css/genericond.css', __FILE__ , '', '3.0.3.1' ) );
     }
 
     function register_admin_styles() {
-    	wp_register_style( 'genericondExampleStyles', plugins_url( 'css/example.css', __FILE__ , '', '3.0.3' ) );
-    	wp_register_script( 'genericondExampleJS', plugins_url( 'js/example.js', __FILE__ , array( 'jquery' ), '3.0.3' ) );
+    	wp_register_style( 'genericondExampleStyles', plugins_url( 'css/example.css', __FILE__ , '', '3.0.3.1' ) );
+    	wp_register_script( 'genericondExampleJS', plugins_url( 'js/example.js', __FILE__ , array( 'jquery' ), '3.0.3.1' ) );
     }
 
     function add_admin_styles() {
@@ -82,16 +82,16 @@ class GenericonsHELF {
                     'rotate' => '',
                     'repeat' => '1'
                 ), $params );
-        
+
         // Resizing
         $genericon_size = "genericon-";
-        if ( !empty($genericonatts['size']) && isset($genericonatts['size']) && in_array($genericonatts['size'], array('2x', '3x', '4x', '5x', '6x')) ) { 
-            $genericon_size .= $genericonatts['size']; 
+        if ( !empty($genericonatts['size']) && isset($genericonatts['size']) && in_array($genericonatts['size'], array('2x', '3x', '4x', '5x', '6x')) ) {
+            $genericon_size .= $genericonatts['size'];
         }
-        else { 
-            $genericon_size .= "1x"; 
+        else {
+            $genericon_size .= "1x";
         }
-        
+
         // Color
         $genericon_color = "color:";
         if ( isset($genericonatts['color']) && !empty($genericonatts['color']) ) {
@@ -103,16 +103,16 @@ class GenericonsHELF {
         $genericon_color .= ";";
 
         // Rotate
-        if ( !empty($genericonatts['rotate']) && isset($genericonatts['rotate']) && in_array($genericonatts['rotate'], array('90', '180', '270', 'flip-horizontal', 'flip-vertical')) ) { 
-            $genericon_rotate = 'genericon-rotate-'.$genericonatts['rotate']; 
+        if ( !empty($genericonatts['rotate']) && isset($genericonatts['rotate']) && in_array($genericonatts['rotate'], array('90', '180', '270', 'flip-horizontal', 'flip-vertical')) ) {
+            $genericon_rotate = 'genericon-rotate-'.$genericonatts['rotate'];
         }
-         
+
         // Build the Genericon!
         $genericon_styles = $genericon_color; // In case I add more later? Hope I never have to, but...
 
         $genericon_code = '<i style="'.$genericon_styles.'" class="genericond genericon genericon-'.$genericonatts['icon'].' '.$genericon_size.' '.$genericon_rotate.'"></i>';
         $genericon = $genericon_code;
-        
+
         // Repeat the genericon
         for ($i = 2 ; $i <= $genericonatts['repeat']; ++$i) {
 	        $genericon .= $genericon_code;
@@ -132,34 +132,34 @@ class GenericonsHELF {
 		?>
 		<div class="wrap">
 
-        <h2>Genericon'd 3.0.3 Settings</h2>
-        
+        <h2>Genericon'd 3.0.3.1 Settings</h2>
+
         <p>There are no settings for Genericon'd. This page is for documentation only. <a href="http://genericons.com">Genericons</a> are vector icons embedded in a webfont designed to be clean and simple keeping with a generic aesthetic. You can use genericons for instant HiDPI, to change icon colors on the fly, or even with CSS effects such as drop-shadows or gradients. They are provided here as a quick way to include them on your site, regardless of theme.</p>
     	<div id="primary">
     		<div id="content">
     			<div id="glyph">
     			</div>
-    
+
     			<div class="description">
                     <p>Genericons can be displayed via one of the following methods:
                     <br /><code>&#091;genericon icon=twitter&#093;</code>
                     <br />
                     <br /><code>&lt;i alt="f202" class="genericond genericon genericon-twitter"&gt;&lt;/i&gt;</code></p>
-                    
+
                     <p>You can also use <code>div</code> or <code>span</code> instead of <code>i</code></p>
-                    
+
                     <p>On the fly color changing means you can make a Twitter Blue icon: <code>&#091;genericon icon=twitter color=#4099FF&#093;</code></p>
-                    
+
                     <p>On the fly resize lets you make a Facebook icon bigger: <code>&#091;genericon icon=facebook size=4x&#093;</code></p>
-            
+
                     <p>Want to repeat a Genericon multiple times? Like a star? <code>&#091;genericon icon=star repeat=3&#093;</code></p>
-                    
+
                     <p>Want to flip it around? <code>&#091;genericon icon=twitter rotate=flip-horizontal&#093;</code></p>
     			</div>
-    
+
     		</div>
     	</div>
-                       
+
 		<div id="icons">
 			<div id="iconlist">
 
@@ -278,7 +278,7 @@ class GenericonsHELF {
 
 			</div>
 		</div>
-		
+
         <p>Need more examples? Check out <a href="<?php echo plugins_url( 'genericons/example.html', __FILE__); ?>">the official Genericons Examples</a></p>
 
         </div>
