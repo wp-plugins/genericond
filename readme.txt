@@ -103,6 +103,10 @@ You can use the asterisk hack to serve a different icon to IE7 once you have sav
 
 == Changelog ==
 
+= 3.1.0.0 =
+# 2014-06-??
+* Genericon release 3.1 (see <a href="">release notes</a>)
+
 = 3.0.3.4 =
 * 2014-06-16
 * Adding better link to settings
