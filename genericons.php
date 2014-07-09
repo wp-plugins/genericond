@@ -300,7 +300,7 @@ class GenericonsHELF {
 		<div id="temp" style="display: none;"></div>
 
 
-        <p>Need more examples? Check out <a href="<?php echo plugins_url( 'genericons/example.html', __FILE__); ?>">the official Genericons Examples</a> or <a href="http://wordpress.org/plugins/genericond/faq/">the Genericon'd FAQ</a>.</p>
+        <p>Need more examples? Check out <a href="<?php echo plugins_url( 'genericons/font/example.html', __FILE__); ?>">the official Genericons Examples</a> or <a href="http://wordpress.org/plugins/genericond/faq/">the Genericon'd FAQ</a>.</p>
 
         </div>
         <?php
