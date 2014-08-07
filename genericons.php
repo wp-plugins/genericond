@@ -62,7 +62,7 @@ class GenericonsHELF {
             wp_dequeue_style( 'genericons' ); // This is to force other plugins and themes with older versions to STFUNOOB
             wp_deregister_style('genericons');
         }
-        wp_enqueue_style( 'genericons', plugins_url( 'genericons/font/genericons.css', __FILE__ , '', self::$gen_ver ) );
+        wp_enqueue_style( 'genericons', plugins_url( 'genericons/genericons.css', __FILE__ , '', self::$gen_ver ) );
         wp_enqueue_style( 'genericond', plugins_url( 'css/genericond.css', __FILE__ , '', self::$gen_ver ) );
     }
 
