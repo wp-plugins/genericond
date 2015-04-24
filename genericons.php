@@ -40,7 +40,7 @@ License: MIT
 
 class GenericonsHELF {
 
-    static $gen_ver = '3.2.0'; // Plugin version so I can be lazy
+    static $gen_ver = '3.3.1'; // Plugin version so I can be lazy
     
     public function __construct() {
         add_action( 'init', array( &$this, 'init' ) );
