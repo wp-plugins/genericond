@@ -116,6 +116,7 @@ You can use the asterisk hack to serve a different icon to IE7 once you have sav
 = 3.3.1 =
 * 2015-04-23
 * Added support to hover text
+* Removed source files that aren't being used to save space.
 
 = 3.3.0 =
 * 2014-10-31
